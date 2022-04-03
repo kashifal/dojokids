@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body
+{
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
+  height: 10vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav img {
+  height: 30px;
+}
+.mobile-nav {
+  height: 10vh;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggleBtn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.toggleBtn span {
+  color: black;
+}
+.mobile-nav img {
+  height: 30px;
+}
+.btns {
+  display: flex;
+  gap: 5px;
+}
+.links a {
+  padding: 5px 25px;
+  text-decoration: none;
+  font-family: "Roboto", calibri;
+  color: black;
+}
+.links a:hover {
+  color: #50d344;
+  border-bottom: 2px solid #50d344;
+}
+.banner {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text h1 {
+  font-family: "Open Sans", calibri;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+.text p {
+  font-family: "Roboto", calibri;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.bannerBtns {
+  display: flex;
+  gap: 5px;
+}
+.grid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px;
+}
+
+.icon-text {
+  display: flex;
+  gap: 10px;
+  line-height: 25px;
+}
+.icon-text .main-text {
+  font-family: "Roboto", calibri;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  position: fixed;
+  height: 90%;
+  width: 100%;
+  background-color: #50d344;
+  top: 0%;
+  top: 10%;
+  padding: 30px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  left: 0%;
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.added {
+  display: block;
+  position: fixed;
+  height: 90%;
+  width: 100%;
+  background-color: #50d344;
+  top: 0%;
+  top: 10%;
+  padding: 30px;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 0%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.material-icons {
+  color: #50d344;
+}
+.mini-cards {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.illus img {
+  height: 500px;
+  width: 550px;
+  border-radius: 100px;
+}
+
+@media all and (max-width: 950px) {
+  .illus {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .banner {
+    justify-content: center;
+    text-align: center;
+  }
+  .mini-cards {
+    justify-content: center;
+  }
+  .bannerBtns {
+    justify-content: center;
+  }
+}
+@media all and (max-width: 820px) {
+  .nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 500px){
+  .text h1 {
+    font-family: "Open Sans", calibri;
+    font-size: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+  }.text p {
+    font-family: "Roboto", calibri;
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .banner {
+    margin-top: -40px;
+  }
+  .sidebar {
+    position: fixed;
+    height: 90%;
+    width: 100%;
+    background-color: #50d344;
+    top: 0%;
+    top: 10%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0%;
+    display: none;
+  }
+  
+  .added {
+    display: block;
+    position: fixed;
+    height: 90%;
+    width: 100%;
+    background-color: #50d344;
+    top: 0%;
+    top: 10%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0%;
   }
 }
