@@ -5,16 +5,18 @@ import Navbar from "./Components/Navbar";
 import Banner from "./Components/Banner";
 import Container from "./Components/Container";
 import MobileNav from "./Components/MobileNav";
+import Teaching from "./Components/Teaching";
 function App() { 
 
   return (
-    <>
+  
        <Container>
       <Navbar />
       <MobileNav />
-      <Banner />
+        <Banner />
+        <Teaching />
       </Container>
-    </>
+  
   );
 }
 

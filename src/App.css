@@ -3,6 +3,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  font-family: 'Open Sans';
 }
 body
 {
@@ -133,9 +134,93 @@ body
   height: 500px;
   width: 550px;
   border-radius: 100px;
+}  
+
+
+.teaching
+{
+  min-height: 90vh;
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+ 
+.teaching-text h1 {
+  margin-top: 80px;
+  font-family: "Open Sans", calibri;
+  font-size: 50px;
+  padding-bottom: 20px; 
+  text-align: center;
 }
 
+.teaching-text p {
+  font-family: "Roboto", calibri;
+  font-size: 20px;text-align: center;
+  padding-bottom: 20px; 
+}
+.bannerBtnss {
+  justify-content: center;  
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.boxes
+{
+  height: 300px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;  
+  gap: 10px;
+}
+.single
+{
+  height: 80%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  z-index: 2;
+  width: 20%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.2s ease;
+}
+
+.single::before
+{
+  height: 90px;
+  width: 90px;
+  top: -10%;z-index: -1;
+  border-radius: 45px;
+  background-color: #50d344; 
+  position: absolute;
+  left: -10%;
+  content: '';
+  transition: .2s ease;
+}
+.single:hover.single::before {
+  height: 100%;
+  width: 100%; border-radius: 0px;
+  top: 0%;
+  left: 0%;
+}
+.single img
+{ 
+  width: 70px;
+}
 @media all and (max-width: 950px) {
+  .single {
+    height: 80%;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   .illus {
     display: none;
   }
@@ -160,12 +245,31 @@ body
 }
 
 @media all and (max-width: 500px){
+ 
+.single {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
   .text h1 {
     font-family: "Open Sans", calibri;
     font-size: 35px;
     padding-bottom: 20px;
     text-align: center;
-  }.text p {
+  }
+  .teaching-text h1
+  {
+    font-family: "Open Sans",
+    calibri;
+    margin-top: 170px;
+    font-size: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .text p {
     font-family: "Roboto", calibri;
     font-size: 20px;
     padding-bottom: 20px;
@@ -204,5 +308,9 @@ body
     justify-content: center;
     flex-direction: column;
     left: 0%;
+  }
+  .teaching
+  {
+    margin-top: -200px;
   }
 }

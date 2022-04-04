@@ -14,7 +14,7 @@ function Banner() {
           <span style={style}> future</span> of your children
         </h1>
         <p>
-          DojoKids studio is an online platform for children
+          DojoKids platform is an online platform for children
           to learn coding and explore new technologies.
         </p>
         <div className="bannerBtns">

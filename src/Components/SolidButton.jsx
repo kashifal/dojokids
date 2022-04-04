@@ -10,7 +10,8 @@ function SolidButton(props) {
     color: "white",
     fontWeight: "bold",
     letterSpacing: "0.1em",
-    fontSize: "15px"
+    fontSize: "15px",
+    marginLeft:props.ml
   };
   return <button  style={style}>{props.btnText}</button>;
 }
